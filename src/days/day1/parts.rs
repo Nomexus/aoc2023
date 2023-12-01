@@ -20,7 +20,7 @@ pub fn part1(path_to_file: &str) -> Result<Option<u32>, Error> {
     }
 
     for number in numbers {
-        sum = sum + number;
+        sum += number;
     }
 
     Ok(Some(sum))
