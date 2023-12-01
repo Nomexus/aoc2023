@@ -1,7 +1,7 @@
 use std::fs;
 use std::io::Error;
 
-pub fn run(path_to_file: &str) -> Result<Option<u32>, Error> {
+pub fn part1(path_to_file: &str) -> Result<Option<u32>, Error> {
     let mut numbers: Vec<u32> = Vec::new();
     let mut sum: u32 = 0;
     let file_contents = fs::read_to_string(path_to_file).expect("Could not read file");
@@ -30,7 +30,7 @@ pub fn run(path_to_file: &str) -> Result<Option<u32>, Error> {
 mod tests {
     #[test]
     fn test_run() {
-        let result = super::run("src/days/day1/part1_test.txt").expect("Could not calculate sum");
+        let result = super::part1("src/days/day1/part1_test.txt").expect("Could not calculate sum");
         assert_eq!(result, Some(142u32))
     }
 }
